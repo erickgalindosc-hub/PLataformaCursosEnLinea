@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma de Cursos Online</title>
+  <link rel="stylesheet" href="style/css/styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+      <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Main Card -->
+    <div class="card" id="businessCard">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="avatar">
+          <img src="style/img/logo.png" alt="Logo Plataforma" id="avatarImg">
+        </div>
+        <div class="header-info">
+          <h1 id="userName">Cargando...</h1>
+          <p class="title" id="userTitle">Cargando...</p>
+          <p class="location" id="userLocation">📍 Cargando...</p>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="card-section">
+        <h2>Sobre la plataforma</h2>
+        <p id="userBio" class="bio">Cargando...</p>
+      </div>
+
+      <!-- Contact -->
+      <div class="card-section">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="icon">📧</span>
+            <span id="userEmail">Cargando...</span>
+            <button id="copyEmailBtn" class="btn btn-small">Copiar</button>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📱</span>
+            <span id="userPhone">Cargando...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Courses -->
+      <div class="card-section">
+        <h2>Cursos disponibles</h2>
+        <div id="skillsList" class="skills-list">
+          Cargando...
+        </div>
+        <button id="toggleSkills" class="btn btn-secondary">Ver más</button>
+      </div>
+
+      <!-- Social -->
+      <div class="card-section">
+        <h2>Comunidad</h2>
+        <div id="socialLinks" class="social-links">
+          Cargando...
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="card-section">
+        <h2>Estadísticas</h2>
+        <div id="stats" class="stats-grid">
+          Cargando...
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      
+      <p class="small">Proyecto Semana 01 – Aplicativo de Cursos Online</p>
+    </footer>
+
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="starter/script.js"></script>
+</body>
+</html>
