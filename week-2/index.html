@@ -2,55 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>🎓 Gestor de Cursos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduFlex | Dashboard de Cursos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/css/styles.css">
 </head>
 <body>
 
-<div class="container">
+<div class="app-container">
+  <!-- SIDEBAR: FORMULARIO -->
+  <aside class="sidebar">
+    <div class="logo-section">
+      <span class="logo-icon">🎓</span>
+      <h2 class="logo-text">EduFlex</h2>
+    </div>
 
-  <h1>🎓 Plataforma de Cursos en Línea</h1>
+    <div class="form-container">
+      <h3>Gestionar Curso</h3>
+      <p class="form-subtitle">Agrega o edita la información del curso</p>
+      
+      <form id="course-form">
+        <input type="hidden" id="course-id">
+        
+        <div class="form-group">
+          <label for="name">Nombre del curso</label>
+          <input type="text" id="name" placeholder="Ej. JavaScript Pro" required>
+        </div>
 
-  <!-- FORMULARIO -->
-  <form id="course-form">
-    <input type="hidden" id="course-id">
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <textarea id="description" rows="3" placeholder="¿De qué trata el curso?"></textarea>
+        </div>
 
-    <input type="text" id="name" placeholder="Nombre del curso" required>
-    <textarea id="description" placeholder="Descripción"></textarea>
+        <div class="form-group">
+          <label for="category">Categoría</label>
+          <select id="category">
+            <option value="programming">💻 Programación</option>
+            <option value="design">🎨 Diseño</option>
+            <option value="marketing">📈 Marketing</option>
+            <option value="business">💼 Negocios</option>
+          </select>
+        </div>
 
-    <select id="category">
-      <option value="programming">💻 Programación</option>
-      <option value="design">🎨 Diseño</option>
-      <option value="marketing">📈 Marketing</option>
-      <option value="business">💼 Negocios</option>
-    </select>
+        <div class="form-group">
+          <label for="priority">Nivel</label>
+          <select id="priority">
+            <option value="low">🟢 Básico</option>
+            <option value="medium">🟡 Intermedio</option>
+            <option value="high">🔴 Avanzado</option>
+          </select>
+        </div>
 
-    <select id="priority">
-      <option value="low">🟢 Básico</option>
-      <option value="medium">🟡 Intermedio</option>
-      <option value="high">🔴 Avanzado</option>
-    </select>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Guardar Curso</button>
+      </form>
+    </div>
+  </aside>
 
-    <button type="submit">Guardar Curso</button>
-  </form>
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="top-bar">
+      <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Buscar cursos por nombre...">
+      </div>
+      
+      <div id="stats" class="stats-header">
+        <!-- Stats populated by JS -->
+      </div>
+    </header>
 
-  <!-- FILTROS -->
-  <div>
-    <select id="filter-status">
-      <option value="all">Todos</option>
-      <option value="active">Disponibles</option>
-      <option value="inactive">No disponibles</option>
-    </select>
+    <section class="content-body">
+      <div class="content-header">
+        <div>
+          <h1>Catálogo de Cursos</h1>
+          <p class="section-desc">Gestiona y organiza tus contenidos educativos</p>
+        </div>
+        
+        <div class="filters">
+          <label for="filter-status">Mostrar:</label>
+          <select id="filter-status">
+            <option value="all">Todos</option>
+            <option value="active">Disponibles</option>
+            <option value="inactive">No disponibles</option>
+          </select>
+        </div>
+      </div>
 
-    <input type="text" id="search" placeholder="Buscar curso...">
-  </div>
-
-  <!-- LISTA -->
-  <div id="course-list"></div>
-
-  <!-- ESTADISTICAS -->
-  <div id="stats"></div>
-
+      <div id="course-list" class="course-grid">
+        <!-- Courses populated by JS -->
+      </div>
+    </section>
+  </main>
 </div>
 
 <script src="starter/script.js"></script>
