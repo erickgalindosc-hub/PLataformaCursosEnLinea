@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>🎓 Gestor de Cursos</title>
+  <link rel="stylesheet" href="style/css/styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>🎓 Plataforma de Cursos en Línea</h1>
+
+  <!-- FORMULARIO -->
+  <form id="course-form">
+    <input type="hidden" id="course-id">
+
+    <input type="text" id="name" placeholder="Nombre del curso" required>
+    <textarea id="description" placeholder="Descripción"></textarea>
+
+    <select id="category">
+      <option value="programming">💻 Programación</option>
+      <option value="design">🎨 Diseño</option>
+      <option value="marketing">📈 Marketing</option>
+      <option value="business">💼 Negocios</option>
+    </select>
+
+    <select id="priority">
+      <option value="low">🟢 Básico</option>
+      <option value="medium">🟡 Intermedio</option>
+      <option value="high">🔴 Avanzado</option>
+    </select>
+
+    <button type="submit">Guardar Curso</button>
+  </form>
+
+  <!-- FILTROS -->
+  <div>
+    <select id="filter-status">
+      <option value="all">Todos</option>
+      <option value="active">Disponibles</option>
+      <option value="inactive">No disponibles</option>
+    </select>
+
+    <input type="text" id="search" placeholder="Buscar curso...">
+  </div>
+
+  <!-- LISTA -->
+  <div id="course-list"></div>
+
+  <!-- ESTADISTICAS -->
+  <div id="stats"></div>
+
+</div>
+
+<script src="starter/script.js"></script>
+</body>
+</html>

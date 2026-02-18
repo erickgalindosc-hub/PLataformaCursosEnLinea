@@ -1,0 +1,232 @@
+/* ============================
+   RESET Y VARIABLES
+============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ============================
+   CONTENEDOR PRINCIPAL
+============================ */
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* ============================
+   TITULO
+============================ */
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* ============================
+   FORMULARIO
+============================ */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input, textarea, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  font-size: 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* BOTÓN */
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* ============================
+   FILTROS
+============================ */
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+  flex: 1;
+}
+
+/* ============================
+   LISTA DE CURSOS
+============================ */
+
+#course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* TARJETA CURSO */
+
+.course-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #4f46e5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateX(6px);
+}
+
+/* CURSO INACTIVO */
+
+.course-card.inactive {
+  opacity: 0.5;
+  border-left-color: #ef4444;
+}
+
+/* TITULO CURSO */
+
+.course-card h3 {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+/* DESCRIPCION */
+
+.course-card p {
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+/* BADGES */
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+
+/* PRIORIDADES */
+
+.high { background: #ef4444; }
+.medium { background: #f59e0b; }
+.low { background: #22c55e; }
+
+/* CATEGORIA */
+
+.category {
+  background: #3b82f6;
+}
+
+/* BOTONES DE ACCIONES */
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* BOTON ELIMINAR */
+
+.delete {
+  background: #ef4444;
+}
+
+.delete:hover {
+  background: #dc2626;
+}
+
+/* BOTON EDITAR */
+
+.edit {
+  background: #10b981;
+}
+
+.edit:hover {
+  background: #059669;
+}
+
+/* ============================
+   ESTADISTICAS
+============================ */
+
+#stats {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1e293b;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 600px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}

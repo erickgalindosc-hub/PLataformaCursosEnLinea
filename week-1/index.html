@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de Cursos Online - Aprende a tu ritmo">
+  <title>Plataforma de Cursos Online</title>
+  <link rel="stylesheet" href="style/css/styles.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- ============================================
+         BOTÓN DE CAMBIO DE TEMA
+         Permite alternar entre modo claro y oscuro
+         ============================================ -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+      <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- ============================================
+         TARJETA PRINCIPAL
+         Contenedor principal de la aplicación
+         ============================================ -->
+    <div class="card" id="businessCard">
+
+      <!-- ENCABEZADO CON GRADIENTE -->
+      <div class="card-header">
+        <div class="avatar">
+          <img src="style/img/logo.png" alt="Logo Plataforma" id="avatarImg">
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="header-info">
+          <h1 id="userName">Cargando...</h1>
+          <p class="title" id="userTitle">Cargando...</p>
+          <p class="location" id="userLocation">📍 Cargando...</p>
+        </div>
+      </div>
+
+      <!-- SECCIÓN: SOBRE LA PLATAFORMA -->
+      <div class="card-section">
+        <h2 class="section-title">
+          <span class="section-icon">ℹ️</span>
+          Sobre la plataforma
+        </h2>
+        <p id="userBio" class="bio">Cargando...</p>
+      </div>
+
+      <!-- SECCIÓN: CONTACTO -->
+      <div class="card-section">
+        <h2 class="section-title">
+          <span class="section-icon">📞</span>
+          Contacto
+        </h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="icon">📧</span>
+            <span id="userEmail" class="contact-text">Cargando...</span>
+            <button id="copyEmailBtn" class="btn btn-small btn-copy">
+              <span class="btn-icon">📋</span>
+              Copiar
+            </button>
+          </div>
+          <div class="contact-item">
+            <span class="icon">📱</span>
+            <span id="userPhone" class="contact-text">Cargando...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN: CURSOS DISPONIBLES -->
+      <div class="card-section">
+        <h2 class="section-title">
+          <span class="section-icon">📚</span>
+          Cursos disponibles
+        </h2>
+        <div id="skillsList" class="skills-list">
+          Cargando...
+        </div>
+        <button id="toggleSkills" class="btn btn-secondary">
+          Ver más
+          <span class="btn-arrow">→</span>
+        </button>
+      </div>
+
+      <!-- SECCIÓN: COMUNIDAD -->
+      <div class="card-section">
+        <h2 class="section-title">
+          <span class="section-icon">👥</span>
+          Comunidad
+        </h2>
+        <div id="socialLinks" class="social-links">
+          Cargando...
+        </div>
+      </div>
+
+      <!-- SECCIÓN: ESTADÍSTICAS -->
+      <div class="card-section">
+        <h2 class="section-title">
+          <span class="section-icon">📊</span>
+          Estadísticas
+        </h2>
+        <div id="stats" class="stats-grid">
+          Cargando...
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-text">Proyecto Semana 01 – Aplicativo de Cursos Online</p>
+      <p class="footer-copyright">© 2024 - Diseñado con ❤️</p>
+    </footer>
+
+  </div>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast" class="toast">
+    <span class="toast-icon">✓</span>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script src="starter/script.js"></script>
+</body>
+</html>
