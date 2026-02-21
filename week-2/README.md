@@ -1,124 +1,86 @@
-# 📚 Plataforma de Cursos Online
+# 📚 Plataforma de Cursos en Línea
 
-Este proyecto es una **aplicación web interactiva** desarrollada con **HTML, CSS y JavaScript moderno (ES6+)**, cuyo objetivo es simular una **plataforma de cursos en línea**. Forma parte de un proyecto académico del *JavaScript Modern Bootcamp (Semana 01)*.
+## 🧾 Descripción del Proyecto
 
----
+Este proyecto consiste en el desarrollo de una **plataforma web de cursos en línea**, diseñada para permitir a los usuarios visualizar, explorar y acceder a diferentes cursos de manera interactiva y sencilla.
 
-## 🚀 Descripción general
-
-La aplicación muestra información dinámica sobre una plataforma educativa, incluyendo:
-
-* Información general de la plataforma
-* Cursos disponibles
-* Datos de contacto
-* Enlaces a redes/comunidad
-* Estadísticas relevantes
-* Modo claro / oscuro
-
-Toda la información se carga dinámicamente usando **JavaScript**, sin necesidad de recargar la página.
+La aplicación simula el funcionamiento básico de una plataforma educativa digital, mostrando cursos disponibles, información relevante y elementos visuales modernos mediante tecnologías web.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🎯 Objetivo
 
-* **HTML5** → Estructura del proyecto
-* **CSS3** → Diseño visual, responsive y dark mode
-* **JavaScript (ES2023 / ES6+)** → Lógica, interactividad y manipulación del DOM
+El objetivo principal de este proyecto es:
 
-No se utilizan librerías ni frameworks externos.
-
----
-
-## 📁 Estructura del proyecto
-
-```
-plataforma-cursos/
-│
-├── index.html
-├── styles.css
-└── starter/
-    └── script.js
-```
+- Aplicar conocimientos en **HTML, CSS y JavaScript**
+- Diseñar una interfaz moderna y organizada
+- Crear una página web interactiva
+- Simular el funcionamiento de una plataforma educativa virtual
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+## 🛠️ Tecnologías Utilizadas
 
-### Opción recomendada (Live Server)
+El proyecto fue desarrollado utilizando:
 
-1. Abrir la carpeta del proyecto en **Visual Studio Code**
-2. Instalar la extensión **Live Server** (si no está instalada)
-3. Hacer clic derecho sobre `index.html`
-4. Seleccionar **Open with Live Server**
-
-Esto abrirá el proyecto en el navegador usando un servidor local.
-
-### Opción alternativa
-
-* Abrir el archivo `index.html` directamente en cualquier navegador moderno.
+- **HTML5** → Estructura del contenido
+- **CSS3** → Diseño visual y estilos
+- **JavaScript** → Interactividad y comportamiento dinámico
 
 ---
 
-## ⚙️ Funcionamiento del proyecto
+## 📂 Estructura del Proyecto
 
-### HTML
 
-* Define la estructura visual de la aplicación.
-* Contiene contenedores vacíos que se rellenan dinámicamente con JavaScript.
+### Descripción de Archivos
 
-### CSS
-
-* Maneja el diseño visual, animaciones y responsive.
-* Usa **variables CSS** para facilitar el cambio de tema (claro / oscuro).
-
-### JavaScript
-
-El archivo `script.js` se encarga de:
-
-* Esperar a que cargue el DOM (`DOMContentLoaded`)
-* Definir los datos de la plataforma (objetos y arrays)
-* Insertar dinámicamente la información en el HTML
-* Manejar eventos del usuario:
-
-  * Cambio de tema (dark / light)
-  * Mostrar más cursos
-  * Copiar email al portapapeles
-* Mostrar notificaciones tipo *toast*
-* Renderizar estadísticas dinámicas
+- **index.html:** Contiene la estructura principal de la página web.
+- **styles.css:** Contiene todos los estilos visuales y diseño.
+- **script.js:** Contiene la funcionalidad e interactividad.
+- **README.md:** Documento con la información del proyecto.
 
 ---
 
-## ✨ Funcionalidades principales
+## ⚙️ Funcionalidades
 
-* 🔄 Carga dinámica de contenido
-* 🌙 Modo claro / oscuro
-* 📋 Copiar email al portapapeles
-* 📊 Estadísticas visuales
-* 📱 Diseño responsive
-* 🎯 Interfaz interactiva
+La plataforma incluye:
 
----
-
-## 🎓 Objetivo académico
-
-Este proyecto demuestra el uso de:
-
-* Manipulación del DOM
-* Eventos en JavaScript
-* Arrays y objetos
-* Buenas prácticas de separación de responsabilidades (HTML, CSS, JS)
-* JavaScript moderno (ES6+)
+- Visualización de cursos disponibles
+- Diseño moderno y organizado
+- Interfaz interactiva
+- Navegación clara y sencilla
+- Elementos visuales atractivos
 
 ---
 
-## ❤️ Autor
+## 💻 Cómo Ejecutar el Proyecto
 
-Proyecto desarrollado con fines educativos para el **JavaScript Modern Bootcamp**.
+Para usar la plataforma:
+
+1. Descarga todos los archivos del proyecto.
+2. Guárdalos en una misma carpeta.
+3. Abre el archivo **index.html** en tu navegador.
+
+No se requiere instalación adicional.
 
 ---
 
-## 📌 Notas finales
+## 👨‍💻 Autor
 
-No se requiere instalación adicional ni dependencias externas. El proyecto puede ejecutarse directamente en el navegador.
+**Nombre:** Erick Santiago  
+**Área:** Desarrollo Web  
+**Proyecto:** Plataforma de Cursos en Línea  
 
-¡Gracias por revisar este proyecto! 🚀
+---
+
+## 📌 Conclusión
+
+Este proyecto permitió aplicar conocimientos de desarrollo web, mejorar habilidades en diseño de interfaces y comprender la estructura de una aplicación web básica.
+
+Además, sienta las bases para futuras mejoras como:
+
+- Registro de usuarios
+- Sistema de progreso
+- Base de datos
+- Plataforma educativa completa
+
