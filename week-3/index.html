@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎓 LearningPlatform | Sistema de Gestión</title>
+    <link rel="stylesheet" href="style/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+
+      <!-- ================= HEADER ================= -->
+      <header class="header">
+        <h1>🎓 LearningPlatform</h1>
+        <p class="subtitle">
+          Sistema de Gestión de Cursos Online - Proyecto Semana 03
+        </p>
+      </header>
+
+      <!-- ================= TABS ================= -->
+      <nav class="tabs">
+        <button class="tab-btn active" data-tab="catalog">
+          📚 Cursos
+        </button>
+
+        <button class="tab-btn" data-tab="users">
+          👥 Usuarios
+        </button>
+
+        <button class="tab-btn" data-tab="transactions">
+          📝 Inscripciones
+        </button>
+
+        <button class="tab-btn" data-tab="stats">
+          📊 Estadísticas
+        </button>
+      </nav>
+
+      <!-- ================= CONTENT ================= -->
+      <main class="tab-content">
+
+        <!-- ================= CURSOS ================= -->
+        <section id="catalog" class="tab-panel active">
+          <div class="panel-header">
+            <h2>📚 Catálogo de Cursos</h2>
+
+            <div class="actions">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar curso..."
+              />
+
+              <select id="filter-type">
+                <option value="all">Todos los tipos</option>
+                <option value="ProgrammingCourse">Programación</option>
+                <option value="DesignCourse">Diseño</option>
+                <option value="MarketingCourse">Marketing</option>
+              </select>
+
+              <select id="filter-status">
+                <option value="all">Todos</option>
+                <option value="active">Activos</option>
+                <option value="inactive">Inactivos</option>
+              </select>
+
+              <button id="add-item-btn" class="btn btn-primary">
+                + Agregar Curso
+              </button>
+            </div>
+          </div>
+
+          <div id="item-list" class="items-grid"></div>
+
+          <div id="empty-state" class="empty-state" style="display: none;">
+            <p>📭 No hay cursos registrados</p>
+          </div>
+        </section>
+
+        <!-- ================= USUARIOS ================= -->
+        <section id="users" class="tab-panel">
+          <div class="panel-header">
+            <h2>👥 Usuarios Registrados</h2>
+
+            <div class="actions">
+              <input
+                type="text"
+                id="search-users"
+                placeholder="Buscar usuario..."
+              />
+
+              <select id="filter-role">
+                <option value="all">Todos los roles</option>
+                <option value="Student">Estudiantes</option>
+                <option value="Instructor">Instructores</option>
+              </select>
+
+              <button id="add-user-btn" class="btn btn-primary">
+                + Agregar Usuario
+              </button>
+            </div>
+          </div>
+
+          <div id="user-list" class="members-grid"></div>
+        </section>
+
+        <!-- ================= INSCRIPCIONES ================= -->
+        <section id="transactions" class="tab-panel">
+          <div class="panel-header">
+            <h2>📝 Historial de Inscripciones</h2>
+          </div>
+
+          <div id="transaction-list" class="loans-list"></div>
+        </section>
+
+        <!-- ================= ESTADÍSTICAS ================= -->
+        <section id="stats" class="tab-panel">
+          <div class="panel-header">
+            <h2>📊 Estadísticas del Sistema</h2>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-value" id="stat-total">0</span>
+              <span class="stat-label">Total Cursos</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-value" id="stat-active">0</span>
+              <span class="stat-label">Activos</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-value" id="stat-inactive">0</span>
+              <span class="stat-label">Inactivos</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-value" id="stat-users">0</span>
+              <span class="stat-label">Usuarios</span>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <script src="starter/script.js"></script>
+  </body>
+</html>
