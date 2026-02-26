@@ -1,151 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🎓 LearningPlatform | Sistema de Gestión</title>
-    <link rel="stylesheet" href="style/css/styles.css" />
-  </head>
-
-  <body>
-    <div class="app-container">
-
-      <!-- ================= HEADER ================= -->
-      <header class="header">
-        <h1>🎓 LearningPlatform</h1>
-        <p class="subtitle">
-          Sistema de Gestión de Cursos Online - Proyecto Semana 03
-        </p>
-      </header>
-
-      <!-- ================= TABS ================= -->
-      <nav class="tabs">
-        <button class="tab-btn active" data-tab="catalog">
-          📚 Cursos
-        </button>
-
-        <button class="tab-btn" data-tab="users">
-          👥 Usuarios
-        </button>
-
-        <button class="tab-btn" data-tab="transactions">
-          📝 Inscripciones
-        </button>
-
-        <button class="tab-btn" data-tab="stats">
-          📊 Estadísticas
-        </button>
-      </nav>
-
-      <!-- ================= CONTENT ================= -->
-      <main class="tab-content">
-
-        <!-- ================= CURSOS ================= -->
-        <section id="catalog" class="tab-panel active">
-          <div class="panel-header">
-            <h2>📚 Catálogo de Cursos</h2>
-
-            <div class="actions">
-              <input
-                type="text"
-                id="search-input"
-                placeholder="Buscar curso..."
-              />
-
-              <select id="filter-type">
-                <option value="all">Todos los tipos</option>
-                <option value="ProgrammingCourse">Programación</option>
-                <option value="DesignCourse">Diseño</option>
-                <option value="MarketingCourse">Marketing</option>
-              </select>
-
-              <select id="filter-status">
-                <option value="all">Todos</option>
-                <option value="active">Activos</option>
-                <option value="inactive">Inactivos</option>
-              </select>
-
-              <button id="add-item-btn" class="btn btn-primary">
-                + Agregar Curso
-              </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduFlex | Gestión de Cursos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="logo-icon">🎓</span>
+                <span class="logo-text">EduFlex</span>
             </div>
-          </div>
-
-          <div id="item-list" class="items-grid"></div>
-
-          <div id="empty-state" class="empty-state" style="display: none;">
-            <p>📭 No hay cursos registrados</p>
-          </div>
-        </section>
-
-        <!-- ================= USUARIOS ================= -->
-        <section id="users" class="tab-panel">
-          <div class="panel-header">
-            <h2>👥 Usuarios Registrados</h2>
-
-            <div class="actions">
-              <input
-                type="text"
-                id="search-users"
-                placeholder="Buscar usuario..."
-              />
-
-              <select id="filter-role">
-                <option value="all">Todos los roles</option>
-                <option value="Student">Estudiantes</option>
-                <option value="Instructor">Instructores</option>
-              </select>
-
-              <button id="add-user-btn" class="btn btn-primary">
-                + Agregar Usuario
-              </button>
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-tab="catalog">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-label">Cursos</span>
+                </button>
+                <button class="nav-btn" data-tab="users">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-label">Usuarios</span>
+                </button>
+                <button class="nav-btn" data-tab="transactions">
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-label">Inscripciones</span>
+                </button>
+                <button class="nav-btn" data-tab="stats">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-label">Estadísticas</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <p class="version">EduFlex v1.0.0</p>
             </div>
-          </div>
+        </aside>
 
-          <div id="user-list" class="members-grid"></div>
-        </section>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 id="current-tab-title">Catálogo de Cursos</h1>
+                <div class="top-bar-actions">
+                    <div class="user-profile">
+                        <div class="avatar">AD</div>
+                        <span class="username">Administrador</span>
+                    </div>
+                </div>
+            </header>
 
-        <!-- ================= INSCRIPCIONES ================= -->
-        <section id="transactions" class="tab-panel">
-          <div class="panel-header">
-            <h2>📝 Historial de Inscripciones</h2>
-          </div>
+            <div class="tab-content">
+                <!-- Cursos Panel -->
+                <section id="catalog" class="tab-panel active">
+                    <div class="panel-header">
+                        <div class="search-filters">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" id="search-input" placeholder="Buscar curso...">
+                            </div>
+                            <div class="filter-group">
+                                <select id="filter-type">
+                                    <option value="all">Todas las categorías</option>
+                                    <option value="ProgrammingCourse">Programación</option>
+                                    <option value="DesignCourse">Diseño</option>
+                                    <option value="MarketingCourse">Marketing</option>
+                                </select>
+                                <select id="filter-status">
+                                    <option value="all">Todos los estados</option>
+                                    <option value="active">Activos</option>
+                                    <option value="inactive">Inactivos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="add-item-btn" class="btn btn-primary">
+                            + Agregar Curso
+                        </button>
+                    </div>
+                    
+                    <div id="item-list" class="items-grid"></div>
+                    
+                    <div id="empty-state" class="empty-state" style="display: none;">
+                        <div class="empty-icon">📭</div>
+                        <p>No se encontraron cursos que coincidan con la búsqueda</p>
+                    </div>
+                </section>
 
-          <div id="transaction-list" class="loans-list"></div>
-        </section>
+                <!-- Usuarios Panel -->
+                <section id="users" class="tab-panel">
+                    <div class="panel-header">
+                        <div class="search-filters">
+                            <div class="search-input-wrapper">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" id="search-users" placeholder="Buscar usuario...">
+                            </div>
+                            <select id="filter-role">
+                                <option value="all">Todos los roles</option>
+                                <option value="Student">Estudiantes</option>
+                                <option value="Instructor">Instructores</option>
+                            </select>
+                        </div>
+                        <button id="add-user-btn" class="btn btn-primary">
+                            + Agregar Usuario
+                        </button>
+                    </div>
+                    <div id="user-list" class="members-grid"></div>
+                </section>
 
-        <!-- ================= ESTADÍSTICAS ================= -->
-        <section id="stats" class="tab-panel">
-          <div class="panel-header">
-            <h2>📊 Estadísticas del Sistema</h2>
-          </div>
+                <!-- Inscripciones Panel -->
+                <section id="transactions" class="tab-panel">
+                    <div class="panel-header">
+                        <h2>Historial de Actividad</h2>
+                    </div>
+                    <div id="transaction-list" class="transactions-list">
+                        <!-- Las inscripciones se renderizarán aquí -->
+                    </div>
+                </section>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-value" id="stat-total">0</span>
-              <span class="stat-label">Total Cursos</span>
+                <!-- Estadísticas Panel -->
+                <section id="stats" class="tab-panel">
+                    <div class="stats-overview">
+                        <div class="stat-card">
+                            <div class="stat-card-inner">
+                                <div class="stat-icon">📚</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-total">0</span>
+                                    <span class="stat-label">Total Cursos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card success">
+                            <div class="stat-card-inner">
+                                <div class="stat-icon">✅</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-active">0</span>
+                                    <span class="stat-label">Cursos Activos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card warning">
+                            <div class="stat-card-inner">
+                                <div class="stat-icon">⏳</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-inactive">0</span>
+                                    <span class="stat-label">Cursos Inactivos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stat-card indigo">
+                            <div class="stat-card-inner">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-users">0</span>
+                                    <span class="stat-label">Usuarios Totales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <div class="stat-card">
-              <span class="stat-value" id="stat-active">0</span>
-              <span class="stat-label">Activos</span>
-            </div>
-
-            <div class="stat-card">
-              <span class="stat-value" id="stat-inactive">0</span>
-              <span class="stat-label">Inactivos</span>
-            </div>
-
-            <div class="stat-card">
-              <span class="stat-value" id="stat-users">0</span>
-              <span class="stat-label">Usuarios</span>
-            </div>
-          </div>
-        </section>
-
-      </main>
+        </main>
     </div>
 
     <script src="starter/script.js"></script>
-  </body>
+</body>
 </html>
